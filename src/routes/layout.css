@@ -1,0 +1,81 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+/* Brand colours taken from the academy logo */
+@theme {
+	--color-ink: #0b0b0f;
+	--color-panel: #14141b;
+	--color-panel-2: #1b1b24;
+	--color-line: #2a2a35;
+	--color-brand: #e31b23;
+	--color-brand-dark: #b8141b;
+	--color-navy: #2b3990;
+	--color-navy-light: #4a5bd0;
+	--font-display: 'Oswald', 'Arial Narrow', sans-serif;
+	--font-sans: 'Inter', system-ui, sans-serif;
+}
+
+html {
+	background: var(--color-ink);
+	color-scheme: dark;
+}
+
+body {
+	@apply bg-ink font-sans text-zinc-100 antialiased;
+}
+
+@utility container-page {
+	@apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+@utility heading {
+	@apply font-display font-semibold tracking-wide uppercase;
+}
+
+@utility card {
+	@apply rounded-2xl border border-line bg-panel;
+}
+
+@utility btn {
+	@apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary {
+	@apply btn bg-brand text-white hover:bg-brand-dark;
+}
+
+@utility btn-secondary {
+	@apply btn border border-line bg-panel-2 text-zinc-100 hover:border-zinc-500;
+}
+
+@utility btn-ghost {
+	@apply btn text-zinc-300 hover:bg-panel-2 hover:text-white;
+}
+
+@utility btn-danger {
+	@apply btn border border-brand/40 text-brand hover:bg-brand/10;
+}
+
+@utility label {
+	@apply mb-1.5 block text-sm font-medium text-zinc-300;
+}
+
+@utility input {
+	@apply w-full rounded-xl border-line bg-ink px-3.5 py-2.5 text-sm text-zinc-100 placeholder:text-zinc-500 focus:border-brand focus:ring-brand;
+}
+
+@utility badge {
+	@apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+}
+
+@utility alert-error {
+	@apply rounded-xl border border-brand/40 bg-brand/10 px-4 py-3 text-sm text-red-200;
+}
+
+@utility alert-ok {
+	@apply rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-200;
+}
+
+@utility alert-info {
+	@apply rounded-xl border border-navy-light/40 bg-navy/20 px-4 py-3 text-sm text-indigo-100;
+}
