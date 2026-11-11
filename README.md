@@ -67,7 +67,7 @@ If you change environment variables later, redeploy, because they get built into
 
 The admin can: see all users (with email, real age and the parent's phone for under-18s), set a new password for a user, block or unblock users, see and delete all requests, attach an academy prize to a request, and read every chat.
 
----
+--- 
 
 ## How the rules work
 
